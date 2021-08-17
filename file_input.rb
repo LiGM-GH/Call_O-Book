@@ -71,8 +71,3 @@ class FileReader
 		return "read_questions: Question Not Found"	
 	end
 end
-
-reader = FileReader.new
-array = reader.read_questions(File.dirname(__FILE__) + "/data/questions.txt", 
-	"1.3.1", "nocom")
-puts array
