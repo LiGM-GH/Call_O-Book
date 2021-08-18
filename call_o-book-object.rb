@@ -21,7 +21,7 @@ asker   = FileReader.new(
 )
 std_ans = FileReader.new(
 	File.dirname(__FILE__) + 
-	"/data/standart_answers.txt", mode
+	"/data/standard_answers.txt", mode
 )
 
 end
