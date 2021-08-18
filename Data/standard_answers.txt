@@ -1,0 +1,6 @@
+----------- Lose. Kolobok dead. ----------
+------------- Win. Game ends. ------------
+------------- Unused button. -------------
+----------------- Retry. -----------------
+Data is not stored. Please choose name    
+(used for one game) and/or press enter.   
