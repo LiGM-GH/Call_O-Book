@@ -1,7 +1,7 @@
 require_relative "file_reader.rb"
 require_relative "input_output.rb"
 require_relative "functions_and_constants.rb"
-begin # Необходимые здесь функции и константы. 
+begin # Nesessary here functions and constants. 
 #~ Setup: 
 #~ interface: user, 
 #~ printing letters with delay: little_delay,
