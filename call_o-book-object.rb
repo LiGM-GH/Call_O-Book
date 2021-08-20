@@ -2,9 +2,10 @@ require_relative "file_reader.rb"
 require_relative "input_output.rb"
 require_relative "functions_and_constants.rb"
 begin # Необходимые здесь функции и константы. 
-# Установки: 
-# пользовательский интерфейс, 
-# печатание с задержкой delay.
+#~ Setup: 
+#~ interface: user, 
+#~ printing letters with delay: little_delay,
+#~ printing blocks delay: big_delay. 
 
 mode = "usr"
 little_delay = 0.001
