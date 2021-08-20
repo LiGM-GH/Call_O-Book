@@ -1,7 +1,7 @@
 # Call_O-Book
 #### _Started as a part of a game about Kolobok_.
 This is the simplest parody of markup languages,
-the functionality of the program is to process txt files,
+the program can be used to process txt files,
 marked in accordance with the rules:
  - Before each of the blocks there are two lines: 
 	the first with a "%" sign, the second with the word Var 
