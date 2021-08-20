@@ -1,13 +1,14 @@
-# The object of the "FileReader" class
-# reads the file given to it upon initialization
-# with three methods: 
-# this is "read_plot", which reads the text
-# marked up according to the rules for the plot,
-# "read_questions", which reads the text 
-# marked up according to the rules for the questions
-# (the combination of these two markups so far not possible), 
-# and "read_standard_answers", which is used to read a given 
-# line in a file (line numbering in a file starts at 1, not 0) 
+#~ The object of the "FileReader" class
+#~ reads the file given to it upon initialization
+#~ with three methods: 
+#~ this is "read_plot", which reads the text
+#~ marked up according to the rules for the plot,
+#~ "read_questions", which reads the text 
+#~ marked up according to the rules for the questions
+#~ (the combination of these two markups so far not possible), 
+#~ and "read_standard_answers", which is used to read a given 
+#~ line in a file (line numbering in a file starts at 1, not 0) 
+
 class FileReader
 	def initialize(file, comments)
 		@file = file
