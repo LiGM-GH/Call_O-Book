@@ -1,17 +1,21 @@
 require_relative "file_reader.rb"
 require_relative "input_output.rb"
 require_relative "functions_and_constants.rb"
-begin # Nesessary here functions and constants. 
-#~ Setup: 
-#~ interface: user, 
-#~ printing letters with delay: little_delay,
-#~ printing blocks delay: big_delay. 
+begin # Необходимые здесь функции и константы. 
+#~  Установки: 
+#~  	пользовательский интерфейс, 
+#~  	печатание с задержками delay.
 
-mode = "usr"
-little_delay = 0.001
-big_delay = 0.5
-branch = "0"
-
+#~  Чтение файлов:
+#~  	Вопросы из questions.txt, 
+#~  	Сюжет из plot.txt, 
+#~  	Стандартные ответы из standard_answers.txt. 
+begin
+	mode = "usr"
+	little_delay = 0.001
+	big_delay = 0.5
+	branch = "0"
+end
 teller  = FileReader.new(
 	File.dirname(__FILE__) + 
 	"/data/plot.txt", mode
@@ -22,7 +26,7 @@ asker   = FileReader.new(
 )
 std_ans = FileReader.new(
 	File.dirname(__FILE__) + 
-	"/data/standard_answers.txt", mode
+	"/data/standart_answers.txt", mode
 )
 
 end
@@ -34,7 +38,7 @@ if(name == "dev")
 	 asker.chmod("dev")
 	little_delay = 0
 	big_delay = 0
-elsif(name == "user")
+elsif(name == "usr")
 	mode = "usr"
 	teller.chmod("usr")
 	 asker.chmod("usr")
@@ -42,6 +46,8 @@ elsif(name == "user")
 	big_delay = 0.5
 elsif(name == "exit")
 	game_end
+elsif(name == "help")
+	game_help(std_ans)
 end
 say_flag = game_say(teller, branch, little_delay)
 sleep big_delay
@@ -57,7 +63,7 @@ while(teller.exist?(branch))
 			little_delay = 0
 			big_delay = 0
 		end
-	elsif(choice == "user")
+	elsif(choice == "usr")
 		begin
 			mode = "usr"
 			teller.chmod("usr")
@@ -67,6 +73,8 @@ while(teller.exist?(branch))
 		end
 	elsif(choice == "exit")
 		game_end
+	elsif(choice == "help")
+		game_help(std_ans)
 	elsif((mode == "usr") && !teller.exist?(branch+"."+choice))
 		game_type_error(std_ans, little_delay)
 	elsif((mode == "dev") && !teller.exist?(choice))
