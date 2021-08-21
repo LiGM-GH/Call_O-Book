@@ -5,3 +5,8 @@
 Data is not stored. Please choose name    
 (used for one game) and/or press enter.   
 
+dev
+usr
+exit
+help
+
