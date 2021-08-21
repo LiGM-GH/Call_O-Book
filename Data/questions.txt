@@ -1,5 +1,5 @@
 %
-Var 0
+Ask 0
 -
 Ask sth                                
 -
@@ -10,7 +10,7 @@ Ask sth
 Ask sth                                
 
 %
-	Var 0.1
+	Ask 0.1
 -
 Ask sth                                
 -
@@ -21,51 +21,7 @@ Ask sth
 Ask sth                                
 
 %
-		Var 0.1.3
--
-Ask sth                                
--
-Ask sth                                
--
-Ask sth                                
-Ask sth                                
--
-Ask sth                                
-
-%
-			Var 0.1.3.1
--
-Ask sth                                
--
-Ask sth                                
--
-Ask sth                                
-Ask sth                                
-Ask sth                                
-
-%
-	Var 0.2
--
-Ask sth                                
--
-Ask sth                                
-Ask sth                                
--
-Ask sth                                
-
-%
-		Var 0.2.1
--
-Ask sth                                
--
-Ask sth                                
--
-Ask sth                                
--
-Ask sth                                
-
-%
-			Var 0.2.1.3
+		Ask 0.1.3
 -
 Ask sth                                
 -
@@ -77,7 +33,7 @@ Ask sth
 Ask sth                                
 
 %
-				Var 0.2.1.3.1
+			Ask 0.1.3.1
 -
 Ask sth                                
 -
@@ -88,4 +44,48 @@ Ask sth
 Ask sth                                
 
 %
-No choice situations more. 
+	Ask 0.2
+-
+Ask sth                                
+-
+Ask sth                                
+Ask sth                                
+-
+Ask sth                                
+
+%
+		Ask 0.2.1
+-
+Ask sth                                
+-
+Ask sth                                
+-
+Ask sth                                
+-
+Ask sth                                
+
+%
+			Ask 0.2.1.3
+-
+Ask sth                                
+-
+Ask sth                                
+-
+Ask sth                                
+Ask sth                                
+-
+Ask sth                                
+
+%
+				Ask 0.2.1.3.1
+-
+Ask sth                                
+-
+Ask sth                                
+-
+Ask sth                                
+Ask sth                                
+Ask sth                                
+
+%
+No choice situations except given. 
