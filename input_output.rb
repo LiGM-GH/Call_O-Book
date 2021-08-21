@@ -51,8 +51,8 @@ def system_out(stroka, time)
 	sleep time
 end
 
-def game_end()
-	system_out("Для продолжения нажмите enter.            ", 0)
+def game_end()						      
+	system_out("Press enter to continue.                  ", 0)
 	gets
 	exit
 end
