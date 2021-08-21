@@ -5,7 +5,7 @@
 #~ 	marked up according to the rules for the plot,
 #~ 	"read_questions", which reads the text 
 #~ 	marked up according to the rules for the questions
-#~ 	(the combination of these two markups so far not possible), 
+#~ 	(the combination of these two markups is now possible), 
 #~ 	and "read_standard_answers", which is used to read a given 
 #~ 	line in a file (line numbering in a file starts at 1, not 0) 
 
