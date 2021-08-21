@@ -1,4 +1,5 @@
 require_relative "file_reader.rb"
+require_relative "input_output.rb"
 begin
 def game_say(reader, branch, delay)
 	to_tell = reader.read_plot(branch)
