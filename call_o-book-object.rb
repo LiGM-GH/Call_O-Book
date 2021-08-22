@@ -14,7 +14,7 @@ begin # Nesessary here functions and constants.
 begin
 	mode = "usr"
 	little_delay = 0.001
-	big_delay = 0.5
+	big_delay    = 0.5
 	branch = "0"
 end
 teller  = FileReader.new(
@@ -87,14 +87,13 @@ while(teller.exist?(branch))
 			branch = branch + "." + choice
 		end
 		say_flag = game_say(teller, branch, little_delay)
-		sleep big_delay
-		ask_flag = game_ask(asker, branch, little_delay)
-		
 		if   (say_flag == "Win")
 			game_win(std_ans, little_delay)
 		elsif(say_flag == "End")
 			game_over(std_ans, little_delay)
 		end
+		sleep big_delay
+		ask_flag = game_ask(asker, branch, little_delay)
 	end
 end
 game_end
