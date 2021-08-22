@@ -58,6 +58,7 @@ def game_end()
 end
 
 def story_say(array, delay)
+	system("clear")||system("cls")
 	if(array == "read_plot: Plot Not Found")
 		output(array, 0)
 	elsif(
