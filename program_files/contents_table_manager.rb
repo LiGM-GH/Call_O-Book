@@ -1,37 +1,51 @@
 require_relative "errors.rb"
 def delete_tabs(line)
-    array_from_line = []; i = 0;
-    while(i<line.length) do array_from_line << line[i]; i+=1; end 
-    array_from_line.delete("\t"); line = ""; 
-    array_from_line.each do |character| line += character; end
-    return line
+  array_from_line = []
+  i = 0
+  while(i<line.length) do 
+    array_from_line << line[i]
+    i += 1
+  end 
+  array_from_line.delete("\t")
+  line = ""
+  array_from_line.each { |character| line += character }
+  line
+end
+def add_tabs(line)
+  array_from_line = []
+  i = 0
+  line.length.times do |i|
+    if(line[i]==".") 
+      array_from_line << "\t"
+      i+=1
+    end
+  end
+  i = 0
+  while(i<line.length) do 
+    array_from_line << line[i]
+    i+=1
+  end 
+  array_from_line.each { |character| line += character }
+  line
 end
 class ContentsTableManager
-    def initialize(file)
-        @given_file_string = file
-        @table_file_string = "#{File.basename(file, '.*')}_contents_table.txt"
-        build
+  attr_accessor :file_string, :table_string
+  def initialize(file)
+    @file_string = file
+    @table_string = "#{File.dirname(file)}/#{File.basename(file, '.*')}_contents_table.txt"
+    build
+  end
+  def build
+    number = 0
+    lines_to_contents_table = []
+    File.open(@file_string, 'r') do |file|
+      begin
+        #~  Reading the file
+        line = file.readline.chomp
+        lines_to_contents_table << delete_tabs(line) << number if line =~ /_*Act [0-9.]*_*/ || line =~ /_*Ask [0-9]*_*/
+        number += 1
+      end until (file.eof?)
     end
-    def get_file_name;  return @given_file_string; end
-    def get_table_name; return @table_file_string; end
-    def build
-        output = 0
-        given_file_object = File.new(@given_file_string, 'r')
-        #~  Здесь должно быть чтение исходного файла. 
-        lines_to_contents_table = []
-        begin
-            line_from_file = given_file_object.readline.chomp
-            if(line_from_file =~ /_*Act [0..9.]*/) then lines_to_contents_table << delete_tabs(line_from_file); end
-            #~  lines_to_contents_table << line_from_file
-            if(given_file_object.eof) then puts "AAA"; end
-        end while (!given_file_object.eof)
-        output = 0
-        
-        #~  Заглушка. Тут имеется в виду запись не на экран, а в оглавление. 
-        puts lines_to_contents_table
-        
-        given_file_object.close; return output
-        
-    end
+    File.open(@table_string, 'w') { |file| file.puts lines_to_contents_table }
+  end
 end
-
