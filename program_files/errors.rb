@@ -1,4 +1,4 @@
-class FileNotFoundError < StandardError
+class NoLineError < StandardError
     attr_reader :reason
     def initialize(reason)
         @reason = reason
