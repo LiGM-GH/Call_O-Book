@@ -1,7 +1,7 @@
 require_relative "./program_files/file_reader.rb"
 require_relative "./program_files/errors.rb"
 require_relative "./program_files/game_processor.rb"
-
+include GameProcess
 # MAIN:   Say, ask, get, repeat. 
 # FUTURE: add name, version, plot file. 
 # FUTURE: Needed GUI. 
