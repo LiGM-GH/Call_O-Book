@@ -1,7 +1,6 @@
 require 'fox16'
 include Fox
-require "c:/users/lipki/0. Programming/call_o-book/books_call_ruby/" + 
-          "v0_1/program_files/game_processor.rb"
+require "program_files/game_processor.rb"
 include GameProcess
 class MainWindow < FXMainWindow
 	attr_accessor :istream, :ostream
