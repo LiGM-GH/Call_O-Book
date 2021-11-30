@@ -34,3 +34,4 @@ class FileReader < ContentsTableManager
     str
   end
 end
+
